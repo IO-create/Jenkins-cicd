@@ -1,18 +1,13 @@
-
-
-package com.example.manikcalculator;
+package com.simplilearn.calculator;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import org.springframework.web.servlet.ModelAndView;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import static org.mockito.Mockito.*;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class CalculatorControllerTest {
+@SpringBootTest
+class CalculatorApplicationTests {
 
-    @Test
-    void testAdd() {
+	@Test
+	void testAdd() {
         // Mock HttpServletRequest and HttpServletResponse objects
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
@@ -35,5 +30,4 @@ class CalculatorControllerTest {
         assertEquals(8.0, modelAndView.getModel().get("result"), "Addition of 3 and 5 should be 8");
     }
 
-    // Similarly, create tests for other operations (subtract, multiply, divide) and error cases
 }
